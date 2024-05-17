@@ -12,13 +12,27 @@ const notion = new Client({
 });
 
 function escapeCodeBlock(body) {
-  const regex = /```([\s\S]*?)```/g;
-  return body.replace(regex, function (match, htmlBlock) {
-    return "\n{% raw %}\n```" + htmlBlock.trim() + "\n```\n{% endraw %}\n";
-  });
+ // 유효성 검사
+ if (typeof body !== 'string') {
+  console.error('에러: body가 문자열이 아니거나 정의되지 않았습니다');
+  throw new TypeError('body는 정의된 문자열이어야 합니다');
+}
+
+const regex = /```([\s\S]*?)```/g;
+return body.replace(regex, function (match, htmlBlock) {
+  return "\n{% raw %}\n```" + htmlBlock.trim() + "\n```\n{% endraw %}\n";
+});
+
 }
 
 function replaceTitleOutsideRawBlocks(body) {
+
+ // 유효성 검사
+ if (typeof body !== 'string') {
+  console.error('에러: body가 문자열이 아니거나 정의되지 않았습니다');
+  throw new TypeError('body는 정의된 문자열이어야 합니다');
+}
+
   const rawBlocks = [];
   const placeholder = "%%RAW_BLOCK%%";
   body = body.replace(/{% raw %}[\s\S]*?{% endraw %}/g, (match) => {
