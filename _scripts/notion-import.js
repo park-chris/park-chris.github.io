@@ -55,6 +55,8 @@ function replaceTitleOutsideRawBlocks(body) {
 // passing notion client to the option
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
+console.log("n2m", n2m);
+
 (async () => {
   // ensure directory exists
   const root = "_posts";
