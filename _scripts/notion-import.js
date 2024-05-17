@@ -147,6 +147,8 @@ title: "${title}"${fmtags}${fmcats}
 
 `;
     const mdblocks = await n2m.pageToMarkdown(id);
+    console.log("mdblocks ", mdblocks);
+
     let md = n2m.toMarkdownString(mdblocks)["parent"];
 
     console.log("md ", md);
