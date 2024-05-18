@@ -72,7 +72,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
     filter: {
       property: "Status",
       select: {
-        name: "Ready",
+        equals: "Ready",
       },
     },
   });
@@ -92,7 +92,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
       filter: {
         property: "Status",
         select: {
-          name: "Ready",
+          equals: "Ready",
         },
       },
     });
