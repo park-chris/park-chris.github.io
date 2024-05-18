@@ -55,8 +55,6 @@ function replaceTitleOutsideRawBlocks(body) {
 // passing notion client to the option
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
-console.log("n2m", n2m);
-
 (async () => {
   // ensure directory exists
   const root = "_posts";
@@ -103,7 +101,6 @@ console.log("n2m", n2m);
 
   for (const r of pages) {
     const id = r.id;
-    console.log("r: ", r)
     // date
     let date = moment(r.created_time).format("YYYY-MM-DD");
     let pdate = r.properties?.["Date"]?.["date"]?.["start"];
@@ -172,12 +169,9 @@ title: "${title}"${fmtags}${fmcats}
 
 `;
     const mdblocks = await n2m.pageToMarkdown(id);
-    console.log("mdblocks ", mdblocks);
 
     let md = n2m.toMarkdownString(mdblocks)["parent"];
 
-    console.log("md ", md);
-    
     if (md === "") {
       continue;
     }
