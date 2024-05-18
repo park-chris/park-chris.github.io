@@ -122,6 +122,13 @@ console.log("n2m", n2m);
       }
     }
 
+    // UUID 
+    let uuid = "";
+    let puuid = r.properties?.["UUID"]?.["ID"];
+    if (puuid?.length > 0) {
+      uuid = puuid[0]?.["plain_text"];
+    }
+
     // frontmatter
     let fmtags = "";
     let fmcats = "";
@@ -165,7 +172,7 @@ title: "${title}"${fmtags}${fmcats}
     let edited_md = md.replace(
       /!\[(.*?)\]\((.*?)\)/g,
       function (match, p1, p2, p3) {
-        const dirname = path.join("assets/img", ftitle);
+        const dirname = path.join("assets/img", uuid);
         if (!fs.existsSync(dirname)) {
           fs.mkdirSync(dirname, { recursive: true });
         }
