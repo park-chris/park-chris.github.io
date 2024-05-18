@@ -133,6 +133,7 @@ console.log("n2m", n2m);
 
     console.log("UUID: ", uuid);
     console.log("low UUID: ", lowuuid);
+    console.log("low 0 UUID: ", lowuuid[0]?.["plain_text"]);
 
     // frontmatter
     let fmtags = "";
