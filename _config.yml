@@ -91,7 +91,7 @@ theme_mode: # [light | dark]
 #
 # e.g. 'https://cdn.com'
 # cdn: "https://github.com/park-chris/park-chris.github.io"
-cdn: "https://chirpy-img.netlify.app"
+# cdn: "https://chirpy-img.netlify.app"
 
 # the avatar on sidebar, support local or CORS resources
 avatar: "/assets/img/avatar.jpg"
