@@ -91,6 +91,7 @@ console.log("n2m", n2m);
 
   for (const r of pages) {
     const id = r.id;
+    console.log("r: ", r)
     // date
     let date = moment(r.created_time).format("YYYY-MM-DD");
     let pdate = r.properties?.["날짜"]?.["date"]?.["start"];
