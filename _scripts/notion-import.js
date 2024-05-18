@@ -66,9 +66,15 @@ console.log("n2m", n2m);
   let response = await notion.databases.query({
     database_id: databaseId,
     filter: {
-      property: "공개",
+      property: "Open",
       checkbox: {
         equals: true,
+      },
+    },
+    filter: {
+      property: "Status",
+      checkbox: {
+        equals: "Ready",
       },
     },
   });
@@ -80,9 +86,15 @@ console.log("n2m", n2m);
       database_id: databaseId,
       start_cursor: nextCursor,
       filter: {
-        property: "공개",
+        property: "Open",
         checkbox: {
           equals: true,
+        },
+      },
+      filter: {
+        property: "Status",
+        checkbox: {
+          equals: "Ready",
         },
       },
     });
@@ -94,19 +106,19 @@ console.log("n2m", n2m);
     console.log("r: ", r)
     // date
     let date = moment(r.created_time).format("YYYY-MM-DD");
-    let pdate = r.properties?.["날짜"]?.["date"]?.["start"];
+    let pdate = r.properties?.["Date"]?.["date"]?.["start"];
     if (pdate) {
       date = moment(pdate).format("YYYY-MM-DD");
     }
     // title
     let title = id;
-    let ptitle = r.properties?.["게시물"]?.["title"];
+    let ptitle = r.properties?.["Title"]?.["title"];
     if (ptitle?.length > 0) {
       title = ptitle[0]?.["plain_text"];
     }
     // tags
     let tags = [];
-    let ptags = r.properties?.["태그"]?.["multi_select"];
+    let ptags = r.properties?.["Tag"]?.["multi_select"];
     for (const t of ptags) {
       const n = t?.["name"];
       if (n) {
@@ -115,7 +127,7 @@ console.log("n2m", n2m);
     }
     // categories
     let cats = [];
-    let pcats = r.properties?.["카테고리"]?.["multi_select"];
+    let pcats = r.properties?.["Category"]?.["multi_select"];
     for (const t of pcats) {
       const n = t?.["name"];
       if (n) {
@@ -135,8 +147,6 @@ console.log("n2m", n2m);
       }
     }
 
-    console.log("UUID: ", uuid);
-    
     // frontmatter
     let fmtags = "";
     let fmcats = "";
