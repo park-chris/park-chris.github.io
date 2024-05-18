@@ -69,12 +69,6 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
         equals: true,
       },
     },
-    filter: {
-      property: "Status",
-      select: {
-        equals: "Ready",
-      },
-    },
   });
 
   const pages = response.results;
@@ -87,12 +81,6 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
         property: "Open",
         checkbox: {
           equals: true,
-        },
-      },
-      filter: {
-        property: "Status",
-        select: {
-          equals: "Ready",
         },
       },
     });
@@ -212,7 +200,7 @@ title: "${title}"${fmtags}${fmcats}
     );
 
     //writing to file
-    fs.appendFile(path.join(root, ftitle), fm + edited_md, (err) => {
+    fs.writeFile(path.join(root, ftitle), fm + edited_md, (err) => {
       if (err) {
         console.log(err);
       }
