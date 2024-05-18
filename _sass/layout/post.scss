@@ -41,6 +41,9 @@ header {
 
   h1 + .post-meta {
     margin-top: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--btn-border-color);
+
   }
 }
 

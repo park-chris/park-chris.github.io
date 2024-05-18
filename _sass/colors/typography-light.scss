@@ -16,7 +16,7 @@
   --label-color: #585858;
   --blockquote-border-color: #eeeeee;
   --blockquote-text-color: #757575;
-  --link-color: #0056b2;
+  --link-color: #1B4242;
   --link-underline-color: #dee2e6;
   --button-bg: #ffffff;
   --btn-border-color: #e9ecef;
@@ -24,7 +24,9 @@
   --btn-backtotop-border-color: #f1f1f1;
   --btn-box-shadow: #eaeaea;
   --checkbox-color: #c5c5c5;
-  --checkbox-checked-color: #07a8f7;
+  --checkbox-checked-color: #183D3D;
+  --h1-color: black;
+  --h2-color: #1B4242;
   --img-bg: radial-gradient(
     circle,
     rgb(255, 255, 255) 0%,
@@ -36,14 +38,14 @@
     rgba(232, 230, 230, 1) 50%,
     rgba(250, 250, 250, 0) 100%
   );
-
+  
   /* Sidebar */
-  --site-title-color: rgb(113, 113, 113);
-  --site-subtitle-color: #717171;
-  --sidebar-bg: #f6f8fa;
+  --site-title-color: rgb(252, 252, 252);
+  --site-subtitle-color: #b1b1b1;
+  --sidebar-bg: linear-gradient(to bottom, #183D3D, #5C8374);
   --sidebar-border-color: #efefef;
-  --sidebar-muted-color: #545454;
-  --sidebar-active-color: #1d1d1d;
+  --sidebar-muted-color: #c7c7c7;
+  --sidebar-active-color: white;
   --sidebar-hover-bg: rgb(223, 233, 241, 0.64);
   --sidebar-btn-bg: white;
   --sidebar-btn-color: #8e8e8e;
@@ -62,9 +64,9 @@
   --btn-paginator-hover-color: var(--sidebar-bg);
 
   /* Posts */
-  --toc-highlight: #0550ae;
+  --toc-highlight: #2D9596;
   --btn-share-color: gray;
-  --btn-share-hover-color: #0d6efd;
+  --btn-share-hover-color: #183D3D;
   --card-bg: white;
   --card-hovor-bg: #e2e2e2;
   --card-shadow: rgb(104, 104, 104, 0.05) 0 2px 6px 0,
@@ -78,7 +80,7 @@
   --kbd-bg-color: white;
   --prompt-text-color: rgb(46, 46, 46, 0.77);
   --prompt-tip-bg: rgb(123, 247, 144, 0.2);
-  --prompt-tip-icon-color: #03b303;
+  --prompt-tip-icon-color: #183D3D;
   --prompt-info-bg: #e1f5fe;
   --prompt-info-icon-color: #0070cb;
   --prompt-warning-bg: rgb(255, 243, 205);

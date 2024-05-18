@@ -66,6 +66,14 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  color: var(--h1-color);
+}
+
+h2 {
+  color: var(--h2-color);
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -619,7 +627,7 @@ main {
 /* Overwrite bootstrap outline button */
 .btn.btn-outline-primary {
   &:not(.disabled):hover {
-    border-color: #007bff !important;
+    border-color: #A8CD9F !important;
   }
 }
 
