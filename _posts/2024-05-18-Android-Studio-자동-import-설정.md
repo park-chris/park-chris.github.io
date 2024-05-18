@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2024-05-18
-title: "간단한 설정"
+title: "Android Studio 자동 import 설정"
 tags: [설정, ]
 categories: [Android, ]
 ---
