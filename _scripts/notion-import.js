@@ -71,8 +71,8 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
     },
     filter: {
       property: "Status",
-      checkbox: {
-        equals: "Ready",
+      select: {
+        name: "Ready",
       },
     },
   });
@@ -91,8 +91,8 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
       },
       filter: {
         property: "Status",
-        checkbox: {
-          equals: "Ready",
+        select: {
+          name: "Ready",
         },
       },
     });
