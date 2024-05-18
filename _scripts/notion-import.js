@@ -129,6 +129,11 @@ console.log("n2m", n2m);
       uuid = puuid[0]?.["plain_text"];
     }
 
+    let lowuuid = r.properties?.["UUID"]?.["id"];
+
+    console.log("UUID: ", uuid);
+    console.log("low UUID: ", lowuuid);
+
     // frontmatter
     let fmtags = "";
     let fmcats = "";
