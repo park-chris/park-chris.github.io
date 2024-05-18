@@ -126,16 +126,17 @@ console.log("n2m", n2m);
     // UUID 
     let uuid = "";
     let puuid = r.properties?.["UUID"]?.["unique_id"];
-    if (puuid?.length > 0) {
-      uuid = puuid?.["prefix"] + puuid?.["number"];
+    if (puuid && typeof puuid === 'object') {
+      let prefix = puuid["prefix"];
+      let number = puuid["number"];
+      
+      if (prefix && number) {
+        uuid = prefix + number;
+      }
     }
 
-    let lowuuid = r.properties?.["UUID"]?.["unique_id"];
-
     console.log("UUID: ", uuid);
-    console.log("low UUID: ", lowuuid);
-    console.log("low 0 UUID: ", lowuuid[0]?.["plain_text"]);
-
+    
     // frontmatter
     let fmtags = "";
     let fmcats = "";
