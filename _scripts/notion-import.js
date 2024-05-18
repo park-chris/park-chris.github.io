@@ -212,7 +212,7 @@ title: "${title}"${fmtags}${fmcats}
     );
 
     //writing to file
-    fs.writeFile(path.join(root, ftitle), fm + edited_md, (err) => {
+    fs.appendFile(path.join(root, ftitle), fm + edited_md, (err) => {
       if (err) {
         console.log(err);
       }
