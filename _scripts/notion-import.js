@@ -125,12 +125,12 @@ console.log("n2m", n2m);
 
     // UUID 
     let uuid = "";
-    let puuid = r.properties?.["UUID"]?.["ID"];
+    let puuid = r.properties?.["UUID"]?.["unique_id"];
     if (puuid?.length > 0) {
       uuid = puuid[0]?.["plain_text"];
     }
 
-    let lowuuid = r.properties?.["UUID"]?.["id"];
+    let lowuuid = r.properties?.["UUID"]?.["unique_id"];
 
     console.log("UUID: ", uuid);
     console.log("low UUID: ", lowuuid);
