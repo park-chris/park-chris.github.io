@@ -35,7 +35,7 @@ API key 값처럼 보안이 필요한 파일들은 저장소에 올려놓으면 
 <예시>
 
 
-프로젝트 최상위 루트 : D:\androidApp\TodayPrice
+프로젝트 최상위 루트 : `D:\androidApp\TodayPrice`
 
 
 2. 원격저장소 history 파일 제거 명령어

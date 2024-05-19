@@ -25,9 +25,7 @@ categories: [Android, ]
 
 ---
 
-
-1. `settings.gradle` 파일에 kakao SDK 추가 후 `Sync now`
-
+1. `settings.gradle` 파일에 kakao SDK 추가 후 `Sync now`
 
 
 {% raw %}
@@ -41,9 +39,7 @@ plugins {
 {% endraw %}
 
 
-
-2. 앱 단의 build.gradle(`build.gradle (:app)`)에 kakao SDK 추가 후 `Sync now`
-
+1. 앱 단의 build.gradle(`build.gradle (:app)`)에 kakao SDK 추가 후 `Sync now`
 
 
 {% raw %}
@@ -88,9 +84,7 @@ dependencies {
 {% endraw %}
 
 
-
-4. AndroidManifest.xml에 Internet 허용을 하고 <application 안에 meta-data를 추가한다.
-
+1. AndroidManifest.xml에 Internet 허용을 하고 <application 안에 meta-data를 추가한다.
 
 **AndroidManifest.xml**
 
@@ -125,15 +119,11 @@ dependencies {
 
 ---
 
-
 1. Kakao Developer([https://developers.kakao.com/](https://developers.kakao.com/))에서 로그인 후 내 애플리케이션 클릭
-
 
 ![0](/assets/img/GBD20/0.png)
 
-
-2. 애플리케이션 추가하기
-
+1. 애플리케이션 추가하기
 
 <설정 항목>
 
@@ -152,15 +142,11 @@ dependencies {
 
 ![1](/assets/img/GBD20/1.png)
 
-
-3. 전체 애플리케이션 > 만든 애플리케이션 > 플랫폼 > Android 플랫폼 등록 클릭
-
+1. 전체 애플리케이션 > 만든 애플리케이션 > 플랫폼 > Android 플랫폼 등록 클릭
 
 ![2](/assets/img/GBD20/2.png)
 
-
-4. Android 플랫폼 등록 시 정보 입력 후 저장
-
+1. Android 플랫폼 등록 시 정보 입력 후 저장
 
 <입력 정보>
 
