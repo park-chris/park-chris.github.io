@@ -64,7 +64,7 @@ categories: [Android, ]
 
 
 {% raw %}
-```text
+```kotlin
 
 interface PriceService {
 	@GET("ListNecessariesPricesService/1/5/")
@@ -81,7 +81,7 @@ interface PriceService {
 
 
 {% raw %}
-```text
+```kotlin
 
 object RetrofitManager {
 
@@ -109,9 +109,6 @@ object RetrofitManager {
 
 
 
----
-
-
 **CategoryActivity.kt**
 
 - `BaseActivity()`은 `AppCompatActivity`을 상속받는 Class고 Toolbar의 모양별 처리를 위해 만들어둔것이고 이번 포스팅과 상관이 없다.
@@ -122,7 +119,7 @@ object RetrofitManager {
 
 
 {% raw %}
-```text
+```kotlin
 
 class CategoryActivity : BaseActivity(ToolbarType.BACK) {
     private lateinit var binding: ActivityCategoryBinding
@@ -188,7 +185,7 @@ Callback이라는 단어는 개발하면서 한번쯤은 들어봤을 것이다.
 
 
 {% raw %}
-```text
+```kotlin
 
 interface ResultCallback {
     fun onSuccess(result: T)
