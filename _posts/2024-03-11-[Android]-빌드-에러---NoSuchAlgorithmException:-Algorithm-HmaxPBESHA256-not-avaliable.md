@@ -57,12 +57,10 @@ Android Studio 업데이트 전에는 빌드하는 데 문제가 없었다. 그�
 **명령어**
 
 
-
-{% raw %}
 ```shell
 [JDK 경로]\bin\keytool -genkey -v -keystore [Keystore 경로] -keyalg RSA -keysize 2048 -validity 9125 -alias [키 이름] -storetype JKS
 ```
-{% endraw %}
+  
 
 
 
@@ -70,11 +68,11 @@ Android Studio 업데이트 전에는 빌드하는 데 문제가 없었다. 그�
 
 
 
-{% raw %}
+ 
 ```shell
 C:\Java\jdk-11\bin\keytool  -genkey -v -keystore "D:\androidApp\android_project_key_store/todayPrice.jks" -keyalg RSA -keysize 2048 -validity 9125 -alias tp_upload_key -storetype JKS
 ```
-{% endraw %}
+  
 
 
 
@@ -100,11 +98,11 @@ C:\Java\jdk-11\bin\keytool  -genkey -v -keystore "D:\androidApp\android_project
 
 
 
-{% raw %}
+  
 ```shell
 keytool -importkeystore -srckeystore [Keystore 경로] -destkeystore [Keystore 경로] -deststoretype pkcs12
 ```
-{% endraw %}
+  
 
 
 
@@ -112,11 +110,11 @@ keytool -importkeystore -srckeystore [Keystore 경로] -destkeystore [Keystore �
 
 
 
-{% raw %}
+  
 ```shell
 keytool -importkeystore -srckeystore D:\androidApp\android_project_key_store\todayPrice.jks -destkeystore D:\androidApp\android_project_key_store\todayPrice.jks -deststoretype pkcs12
 ```
-{% endraw %}
+  
 
 
 
