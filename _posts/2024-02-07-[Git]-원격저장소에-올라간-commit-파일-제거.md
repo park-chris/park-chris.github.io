@@ -42,11 +42,11 @@ API key 값처럼 보안이 필요한 파일들은 저장소에 올려놓으면 
 
 
 
-{% raw %}
+ 
 ```shell
 $ git filter-branch --force --index-filter 'git rm -r --cached --ignore-unmatch파일경로/파일명' --prune-empty -- --all
 ```
-{% endraw %}
+  
 
 
 
@@ -69,11 +69,11 @@ $ git filter-branch --force --index-filter 'git rm -r --cached --ignore-unmatch�
 
 
 
-{% raw %}
+ 
 ```shell
 $ git filter-branch --force --index-filter 'git rm -r --cached --ignore-unmatch app/src/main/res/values/api_key.xml' --prune-empty -- --all
 ```
-{% endraw %}
+  
 
 
 
@@ -87,11 +87,11 @@ $ git filter-branch --force --index-filter 'git rm -r --cached --ignore-unmatch 
 
 
 
-{% raw %}
+ 
 ```shell
 $ git push --force
 ```
-{% endraw %}
+  
 
 
 
