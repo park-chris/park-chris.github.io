@@ -27,8 +27,6 @@ categories: [Android, ]
 
 1. `settings.gradle` 파일에 kakao SDK 추가 후 `Sync now`
 
-
-{% raw %}
 ```kotlin
 plugins {
     ...
@@ -36,13 +34,9 @@ plugins {
     id 'com.google.gms.google-services' version '4.3.13' apply false
 }
 ```
-{% endraw %}
 
+2. 앱 단의 build.gradle(`build.gradle (:app)`)에 kakao SDK 추가 후 `Sync now`
 
-1. 앱 단의 build.gradle(`build.gradle (:app)`)에 kakao SDK 추가 후 `Sync now`
-
-
-{% raw %}
 ```text
 android {
     ...
@@ -63,10 +57,9 @@ dependencies {
 	implementation 'com.kakao.maps.open:android:2.6.0'// 카카오 맵 API
 }
 ```
-{% endraw %}
 
 
-1. `res/values` 폴더 마우스 우클릭 > New > Values Resource File 클릭하고 파일 이름은 api_key로 한다.
+3. `res/values` 폴더 마우스 우클릭 > New > Values Resource File 클릭하고 파일 이름은 api_key로 한다.
 
 	카카오나 기타 API에 필요한 Key 값을 모아놓고 관리하기 위해 만들었다. `.gitignore`에 이 파일을 추가해서 저장소에 안올라가도록 설정한다.
 
@@ -74,23 +67,17 @@ dependencies {
 **res/values/api_key.xml**
 
 
-
-{% raw %}
 ```xml
 <resources>
     <string name="kakao_api_key">api 키 값 자리</string>
 </resources>
 ```
-{% endraw %}
 
 
-1. AndroidManifest.xml에 Internet 허용을 하고 <application 안에 meta-data를 추가한다.
+4. AndroidManifest.xml에 Internet 허용을 하고 <application 안에 meta-data를 추가한다.
 
 **AndroidManifest.xml**
 
-
-
-{% raw %}
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -109,8 +96,6 @@ dependencies {
     </application>
 </manifest>
 ```
-{% endraw %}
-
 
 
 
@@ -123,7 +108,7 @@ dependencies {
 
 ![0](/assets/img/GBD20/0.png)
 
-1. 애플리케이션 추가하기
+2. 애플리케이션 추가하기
 
 <설정 항목>
 
@@ -142,11 +127,11 @@ dependencies {
 
 ![1](/assets/img/GBD20/1.png)
 
-1. 전체 애플리케이션 > 만든 애플리케이션 > 플랫폼 > Android 플랫폼 등록 클릭
+3. 전체 애플리케이션 > 만든 애플리케이션 > 플랫폼 > Android 플랫폼 등록 클릭
 
 ![2](/assets/img/GBD20/2.png)
 
-1. Android 플랫폼 등록 시 정보 입력 후 저장
+4. Android 플랫폼 등록 시 정보 입력 후 저장
 
 <입력 정보>
 
@@ -170,29 +155,20 @@ dependencies {
 
 
 
-{% raw %}
 ```text
 import com.kakao.sdk.common.util.Utility
 
 var keyHash = Utility.getKeyHash(this)
 Log.d("My Key Hash: $keyHash")
 ```
-{% endraw %}
-
 
 
 
 ## 안드로이드에서 지도 그리기
-
-
 ---
-
 
 activity_market.xml
 
-
-
-{% raw %}
 ```xml
 <com.kakao.vectormap.MapView
     android:id="@+id/mapView"
@@ -205,15 +181,10 @@ activity_market.xml
     app:layout_constraintBottom_toBottomOf="parent"
     android:layout_height="300dp" />
 ```
-{% endraw %}
 
 
 
 MarketActivity.kt
-
-
-
-{% raw %}
 ```kotlin
 override fun onResume() {
     binding.mapView.start(object : MapLifeCycleCallback() {
@@ -241,22 +212,15 @@ override fun onResume() {
     })
 }
 ```
-{% endraw %}
 
 
 
 
 ## 지도에서 마커 찍기
-
-
 ---
-
 
 지도에 내가 원하는 drawable을 이용해서 마커를 찍어보자.
 
-
-
-{% raw %}
 ```kotlin
 binding.mapView.start(object : KakaoMapReadyCallback() {
             override fun onMapReady(kakaoMap: KakaoMap) {
@@ -277,16 +241,12 @@ binding.mapView.start(object : KakaoMapReadyCallback() {
             }
         })
 ```
-{% endraw %}
 
 
 
 
 ## 결과물
-
-
 ---
-
 
 아주 잘 지도가 뜨고 있다.
 
