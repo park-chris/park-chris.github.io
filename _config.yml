@@ -48,8 +48,8 @@ webmaster_verifications:
   alexa: # fill in your Alexa verification code
   yandex: # fill in your Yandex verification code
   baidu: # fill in your Baidu verification code
-  facebook: # fill in your Facebook verification code
-  naver: e8004e546c9be1fa900d634cadd528a2016f2fd9
+  facebook: e8004e546c9be1fa900d634cadd528a2016f2fd9 # fill in your Facebook verification code
+  naver: e8004e546c9be1fa900d634cadd528a2016f2fd9 # fill in your Naver verification code
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
