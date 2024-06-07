@@ -26,19 +26,19 @@ Android Studio에서 개발을 하다보면 패키지를 타고 들어가야하�
 ---
 
 
-1. Android Studio에서 프로젝트 View로 설정한다.
+1.Android Studio에서 프로젝트 View로 설정한다.
 
 
 ![1](/assets/img/GBD28/1.png)
 
 
-2. 톱니바퀴를 클릭한다.
+2.톱니바퀴를 클릭한다.
 
 
 ![2](/assets/img/GBD28/2.png)
 
 
-3. Tree Appearance > Compact Middle Packages 를 체크한다.
+3.Tree Appearance > Compact Middle Packages 를 체크한다.
 
 
 ![3](/assets/img/GBD28/3.png)
