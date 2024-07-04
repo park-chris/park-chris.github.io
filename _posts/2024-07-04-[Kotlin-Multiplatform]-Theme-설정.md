@@ -16,6 +16,9 @@ Kotlin Multiplatform을 생성한 후 프로젝트에 Theme를 설정하는 방�
 초기 프로젝트 생성 및 설정은 아래 링크를 참고한다.
 
 
+[https://park-chris.github.io/posts/KMP-프로젝트-시작하기/](https://park-chris.github.io/posts/KMP-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/)
+
+
 
 ## 설정방법
 
@@ -23,7 +26,7 @@ Kotlin Multiplatform을 생성한 후 프로젝트에 Theme를 설정하는 방�
 1. Material Theme Builder를 이용해서 Theme(Color.kt, Theme.kt, Type.kt )을 생성하자.
 
 
-	[bookmark](https://material-foundation.github.io/material-theme-builder/)
+	[https://material-foundation.github.io/material-theme-builder/](https://material-foundation.github.io/material-theme-builder/)
 
 
 	원하는 색상이나 이미지를 선택하여 Theme의 컬러를 지정할 수 있다. 다 지정하고 화면 우측 상단에 있는 +아이콘을 클릭한다.
@@ -41,13 +44,13 @@ Kotlin Multiplatform을 생성한 후 프로젝트에 Theme를 설정하는 방�
 2. composeApp/src/commonMain/kotlin [commonMain]에 ui.theme 디렉토리를 만든다.
 
 
-![2](/assets/img/GBD83/2.png)
+	![2](/assets/img/GBD83/2.png)
 
 
 3. composeApp/src/commonMain/kotlin/ui/theme 디렉토리에 다운로드 받았던 파일의 color, theme, type 파일을 넣어준다.
 
 
-![3](/assets/img/GBD83/3.png)
+	![3](/assets/img/GBD83/3.png)
 
 
 4. Theme.kt 파일을 열어서 가장 아래에 있는 AppTheme()를 아래와 같이 수정해준다.
