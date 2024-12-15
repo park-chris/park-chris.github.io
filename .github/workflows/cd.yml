@@ -13,7 +13,7 @@ jobs:
       contents: write
       issues: write
       pull-requests: write
-    runs-on: ubuntu-22.04
+    runs-on:  [ ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, macos-11, macos-arm-oss ]
     ## runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
