@@ -18,7 +18,7 @@ env:
 
 jobs:
   stale:
-    runs-on: ubuntu-latest
+    runs-on:  [ ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, macos-11, macos-arm-oss ]
     steps:
       - uses: actions/stale@v9
         with:

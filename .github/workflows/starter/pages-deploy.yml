@@ -15,8 +15,7 @@ concurrency:
 
 jobs:
   importer:
-    runs-on: ubuntu-latest
-
+    runs-on:  [ ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, macos-11, macos-arm-oss ]
     steps:
       - uses: actions/checkout@master
     
@@ -54,7 +53,7 @@ jobs:
  
   build:
     needs: importer
-    runs-on: ubuntu-latest
+    runs-on:  [ ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, macos-11, macos-arm-oss ]
 
     steps:           
       - name: Checkout
@@ -94,7 +93,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on:  [ ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, macos-11, macos-arm-oss ]
     needs: build
     steps:
       - name: Deploy to GitHub Pages
