@@ -12,27 +12,13 @@ const notion = new Client({
 });
 
 function escapeCodeBlock(body) {
- // 유효성 검사
- if (typeof body !== 'string') {
-  console.error('에러: body가 문자열이 아니거나 정의되지 않았습니다');
-  throw new TypeError('body는 정의된 문자열이어야 합니다');
-}
-
-const regex = /```([\s\S]*?)```/g;
-return body.replace(regex, function (match, htmlBlock) {
-  return "\n{% raw %}\n```" + htmlBlock.trim() + "\n```\n{% endraw %}\n";
-});
-
+  const regex = /```([\s\S]*?)```/g;
+  return body.replace(regex, function (match, htmlBlock) {
+    return "\n{% raw %}\n```" + htmlBlock.trim() + "\n```\n{% endraw %}\n";
+  });
 }
 
 function replaceTitleOutsideRawBlocks(body) {
-
- // 유효성 검사
- if (typeof body !== 'string') {
-  console.error('에러: body가 문자열이 아니거나 정의되지 않았습니다');
-  throw new TypeError('body는 정의된 문자열이어야 합니다');
-}
-
   const rawBlocks = [];
   const placeholder = "%%RAW_BLOCK%%";
   body = body.replace(/{% raw %}[\s\S]*?{% endraw %}/g, (match) => {
@@ -131,7 +117,6 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
         uuid = prefix + number;
       }
     }
-
     // frontmatter
     let fmtags = "";
     let fmcats = "";
@@ -154,12 +139,9 @@ layout: post
 date: ${date}
 title: "${title}"${fmtags}${fmcats}
 ---
-
 `;
     const mdblocks = await n2m.pageToMarkdown(id);
-
     let md = n2m.toMarkdownString(mdblocks)["parent"];
-
     if (md === "") {
       continue;
     }
@@ -172,7 +154,7 @@ title: "${title}"${fmtags}${fmcats}
     let edited_md = md.replace(
       /!\[(.*?)\]\((.*?)\)/g,
       function (match, p1, p2, p3) {
-        const dirname = path.join("assets/img", uuid);
+        const dirname = path.join("assets/img", ftitle);
         if (!fs.existsSync(dirname)) {
           fs.mkdirSync(dirname, { recursive: true });
         }
